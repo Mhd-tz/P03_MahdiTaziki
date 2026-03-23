@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mahdi Taziki - Style Guide and Design System."
+    />
+    <title>Style Guide | Mahdi Taziki</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .sg-element {
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-light);
+      }
+      .sg-rendered {
+        padding: 2rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-light);
+        margin-bottom: 1.5rem;
+      }
+      h4.sg-heading {
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        margin: 1.5rem 0 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header style="padding: 4rem 2rem 2rem; max-width: 1200px; margin: 0 auto">
+      <h4 class="title-caption">P03 Final Delivery</h4>
+      <h1>Mahdi Taziki Style Guide</h1>
+      <p class="lead" style="max-width: 800px">
+        <strong>Brand Persona:</strong> "Minimalist Designer." Focuses strictly
+        on structure, high-legibility, and organic scroll interactions. Our core
+        color is Muted Purple (#5C4D7D) emphasizing creativity and refinement.
+      </p>
+    </header>
+
+    <main class="container" style="max-width: 1200px; padding-bottom: 100px">
+      <div class="sg-layout">
+        <!-- Sidebar Navigation -->
+        <aside>
+          <nav class="sg-nav" id="sg-nav">
+            <a
+              href="index.html"
+              class="btn btn-primary"
+              style="padding: 0.5rem 1rem; margin-bottom: 1rem; color: white"
+              >Template</a
+            >
+            <a href="#interactive_elements">Interactive Elements</a>
+            <a href="#text_elements">Text Elements</a>
+            <a href="#combined_elements">Combined Elements</a>
+            <a href="#branding">Brand Definition</a>
+            <a href="#brand_context">Brand Context</a>
+            <a href="#about_me">About Me</a>
+            <a href="#updates">Updates</a>
+            <a href="#contact">Contact</a>
+            <a href="#feedback">Feedback</a>
+            <a href="#templates">Template Pages</a>
+            <a href="#citations">Citations</a>
+          </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="sg-content">
+          <!-- ==============================
+                     INTERACTIVE ELEMENTS
+                     ============================== -->
+          <section id="interactive_elements">
+            <h2 style="margin-bottom: 2rem">Interactive Elements</h2>
+
+            <section class="sg-element">
+              <h3>In-text link</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <p>
+                  Visit my <a href="#">Behance Profile</a> for case studies.
+                </p>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p><code>a</code>, <code>a:hover</code></p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;a href="#"&gt;Behance Profile&lt;/a&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Navigation Link (Primary Call to Action)</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <a href="#" class="btn btn-primary">View Projects</a>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p><code>.btn.btn-primary</code></p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;a href="#" class="btn btn-primary"&gt;View Projects&lt;/a&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Buttons (Submit / Alternate)</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered" style="display: flex; gap: 1rem">
+                <button class="btn btn-primary">Submit Form</button>
+                <button class="btn btn-secondary">Secondary Action</button>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.btn.btn-primary</code>, <code>.btn.btn-secondary</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;button class="btn btn-primary"&gt;Submit Form&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary Action&lt;/button&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Text Input Field with Label</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered" style="background: #1a1a1a">
+                <div class="form-group" style="max-width: 300px">
+                  <label class="form-label" style="color: #fff"
+                    >Email Address</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="hello@mahditaziki.com"
+                  />
+                </div>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.form-label</code>, <code>.form-control</code>,
+                <code>.form-control:focus</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+&lt;input type="text" class="form-control" placeholder="..." /&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Image as a Link (With Hover Animation)</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <a
+                  href="#"
+                  class="project-card"
+                  style="max-width: 400px; padding: 0"
+                >
+                  <div class="project-img-wrapper" style="margin-bottom: 0">
+                    <img
+                      src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800"
+                      alt="Tech"
+                    />
+                    <div class="project-overlay-btn">
+                      View Interaction
+                      <svg
+                        class="icon-arrow"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.project-card</code>, <code>.project-img-wrapper</code>,
+                <code>.project-card:hover img</code>,
+                <code>.project-overlay-btn</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;a href="#" class="project-card"&gt;
+    &lt;div class="project-img-wrapper"&gt;
+        &lt;img src="image.jpg" alt="Preview" /&gt;
+        &lt;div class="project-overlay-btn"&gt;View Interaction &lt;svg class="icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="5" y1="12" x2="19" y2="12"&gt;&lt;/line&gt;&lt;polyline points="12 5 19 12 12 19"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+            </section>
+          </section>
+
+          <!-- ==============================
+                     TEXT ELEMENTS
+                     ============================== -->
+          <section id="text_elements" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Text Elements</h2>
+
+            <section class="sg-element">
+              <h3>Headings</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <h1>Heading Level 1</h1>
+                <h2>Heading Level 2</h2>
+                <h3>Heading Level 3</h3>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p><code>h1, h2, h3</code></p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;h1&gt;Heading Level 1&lt;/h1&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Paragraphs</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <p>
+                  Mahdi Taziki approaches design with a focus on reduction. By
+                  stripping out extraneous graphical elements, content is
+                  allowed to dictate the overall form. This is an example of
+                  <strong>strong boldness</strong> and <em>italic elegance</em>.
+                </p>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p><code>p</code></p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;p&gt;Mahdi Taziki approaches design with a focus on reduction...&lt;/p&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Unordered / Numbered Lists</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered" style="display: flex; gap: 4rem">
+                <div>
+                  <ul style="margin-left: 20px; font-family: var(--font-body)">
+                    <li>Front-end Execution</li>
+                    <li>Interface Design</li>
+                    <li>User Research</li>
+                  </ul>
+                </div>
+                <div>
+                  <ol style="margin-left: 20px; font-family: var(--font-body)">
+                    <li>Research & Discovery</li>
+                    <li>Wireframe Validation</li>
+                    <li>Final Prototype</li>
+                  </ol>
+                </div>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p><code>ul, ol, li</code></p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;ul&gt;
+  &lt;li&gt;Front-end Execution&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </section>
+          </section>
+
+          <!-- ==============================
+                     COMBINED ELEMENTS
+                     ============================== -->
+          <section id="combined_elements" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Combined Elements</h2>
+
+            <section class="sg-element">
+              <h3>Main Navigation</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered" style="padding: 1rem">
+                <div class="nav-container" style="height: 60px">
+                  <div class="logo">Mahdi Taziki</div>
+                  <div class="nav-links">
+                    <a href="#" class="nav-link">Work</a>
+                    <a href="#" class="nav-link active">About</a>
+                  </div>
+                </div>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.nav-container</code>, <code>.logo</code>,
+                <code>.nav-links</code>, <code>.nav-link</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;header class="site-header"&gt;
+  &lt;div class="container nav-container"&gt;
+    &lt;div class="logo"&gt;Mahdi Taziki&lt;/div&gt;
+    &lt;nav class="nav-links"&gt;
+      &lt;a href="#work" class="nav-link"&gt;Work&lt;/a&gt;
+      &lt;a href="#about" class="nav-link"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Portfolio Preview Card</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div class="sg-rendered">
+                <a href="#" class="project-card" style="max-width: 400px">
+                  <div
+                    class="project-img-wrapper"
+                    style="margin-bottom: 1.5rem"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800"
+                      alt="Preview"
+                    />
+                    <div class="project-overlay-btn">
+                      View Project
+                      <svg
+                        class="icon-arrow"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <span
+                    class="title-caption"
+                    style="margin-bottom: 0.5rem; color: var(--text-muted)"
+                    >Interaction Design</span
+                  >
+                  <h3 class="project-title">Editorial App</h3>
+                  <p style="margin: 0">
+                    A system built for a digital newsroom context.
+                  </p>
+                </a>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.project-card</code>, <code>.project-img-wrapper</code>,
+                <code>.title-caption</code>, <code>.project-title</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;a href="#" class="project-card"&gt;
+  &lt;div class="project-img-wrapper"&gt;
+      &lt;img src="image.jpg" alt="Preview" /&gt;
+      &lt;div class="project-overlay-btn"&gt;View Project &lt;svg class="icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;line x1="5" y1="12" x2="19" y2="12"&gt;&lt;/line&gt;&lt;polyline points="12 5 19 12 12 19"&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class="title-caption"&gt;Interaction Design&lt;/span&gt;
+  &lt;h3 class="project-title"&gt;Editorial App&lt;/h3&gt;
+  &lt;p&gt;A system built for a digital newsroom context.&lt;/p&gt;
+&lt;/a&gt;</code></pre>
+            </section>
+
+            <section class="sg-element">
+              <h3>Contact & Inquiry Form</h3>
+              <h4 class="sg-heading">Rendered Element:</h4>
+              <div
+                class="sg-rendered"
+                style="background: var(--brand-primary); padding: 3rem"
+              >
+                <form style="max-width: 400px">
+                  <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Project Details</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="I have an idea for..."
+                    ></textarea>
+                  </div>
+                  <button
+                    class="btn btn-primary"
+                    style="border: 1px solid #fff; background: transparent"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+              <h4 class="sg-heading">CSS Selector:</h4>
+              <p>
+                <code>.form-group</code>, <code>.form-label</code>,
+                <code>.form-control</code>
+              </p>
+              <h4 class="sg-heading">Code:</h4>
+              <pre><code>&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+    &lt;input type="email" class="form-control" /&gt;
+  &lt;/div&gt;
+  &lt;button class="btn"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </section>
+          </section>
+
+          <!-- ==============================
+                     BRAND DEFINITION
+                     ============================== -->
+          <section id="branding" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Brand Definition</h2>
+            <div class="sg-element">
+              <h3>Color Palette & Typography</h3>
+              <p>
+                A high-elegance palette featuring Muted Purple on clean white
+                backgrounds.
+              </p>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  margin-top: 2rem;
+                  margin-bottom: 3rem;
+                "
+              >
+                <div
+                  style="
+                    width: 150px;
+                    height: 150px;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--border-light);
+                    background: #5c4d7d;
+                    padding: 1rem;
+                    color: #fff;
+                    font-weight: 600;
+                  "
+                >
+                  #5c4d7d
+                </div>
+                <div
+                  style="
+                    width: 150px;
+                    height: 150px;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--border-light);
+                    background: #1a1a1a;
+                    padding: 1rem;
+                    color: #fff;
+                    font-weight: 600;
+                  "
+                >
+                  #1A1A1A
+                </div>
+                <div
+                  style="
+                    width: 150px;
+                    height: 150px;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--border-light);
+                    background: #f9f9f9;
+                    padding: 1rem;
+                    color: #1a1a1a;
+                    font-weight: 600;
+                  "
+                >
+                  #F9F9F9
+                </div>
+              </div>
+
+              <h4>Typography</h4>
+              <div class="sg-rendered mt-md" style="margin-top: 1rem">
+                <div style="margin-bottom: 2rem">
+                  <h4 style="margin-bottom: 0.5rem">Playfair Display</h4>
+                  <p
+                    style="
+                      font-family: var(--font-head);
+                      font-size: 2rem;
+                      color: var(--text-primary);
+                    "
+                  >
+                    The quick brown fox jumps.
+                  </p>
+                  <p style="font-size: 0.85rem">Usage: Headings (H1-H4)</p>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 0.5rem">Inter</h4>
+                  <p
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 1.15rem;
+                      color: var(--text-secondary);
+                    "
+                  >
+                    The quick brown fox jumps over the lazy dog.
+                  </p>
+                  <p style="font-size: 0.85rem">
+                    Usage: Body paragraphs, UI labels.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     BRAND CONTEXT
+                     ============================== -->
+          <section id="brand_context" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Brand Context</h2>
+            <div class="sg-element">
+              <h3>Homepage Components</h3>
+              <p>
+                Mockups demonstrating Mahdi Taziki's elegant, minimal design
+                system in realistic contexts.
+              </p>
+
+              <h4 class="sg-heading">Hero Banner Structure</h4>
+              <div
+                class="sg-rendered"
+                style="padding: 4rem 2rem; position: relative"
+              >
+                <h2
+                  style="
+                    font-size: 2.5rem;
+                    max-width: 500px;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Crafting digital experiences.
+                </h2>
+                <p
+                  style="
+                    font-size: 1.15rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 2rem;
+                  "
+                >
+                  Interactive Developer.
+                </p>
+                <a href="#" class="btn btn-primary">Experiences</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     ABOUT ME
+                     ============================== -->
+          <section id="about_me" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">About Me</h2>
+            <div class="sg-element">
+              <h3>My Story</h3>
+              <p>
+                As a student at Simon Fraser University studying Interactive
+                Arts & Technology, I bridge the gap between creative aesthetic
+                systems and robust computational logic.
+              </p>
+              <p>
+                I specialize in building full-stack web applications
+                prioritizing clean code, comprehensive CSS architectures, and
+                accessible user experiences.
+              </p>
+              <h4 class="mt-md" style="margin-top: 2rem; margin-bottom: 1rem">
+                My Values
+              </h4>
+              <ul style="margin-left: 20px">
+                <li>
+                  <strong>Content First:</strong> Design should frame, not
+                  overpower, the information.
+                </li>
+                <li>
+                  <strong>Performance:</strong> Fast, accessible DOM structures
+                  over heavy libraries.
+                </li>
+                <li>
+                  <strong>Precision:</strong> High attention to fluid scaling
+                  and cross-device testing.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     UPDATES
+                     ============================== -->
+          <section id="updates" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Updates & Events</h2>
+            <div class="sg-element">
+              <div class="sg-rendered" style="margin-bottom: 1.5rem">
+                <span class="title-caption" style="margin-bottom: 0.5rem"
+                  >March 2026</span
+                >
+                <h3>P03 Portfolio Finalized</h3>
+                <p>
+                  Successfully completed the comprehensive redesign of the
+                  digital portfolio system incorporating advanced scroll
+                  animations and modal interfaces.
+                </p>
+              </div>
+              <div class="sg-rendered">
+                <span class="title-caption" style="margin-bottom: 0.5rem"
+                  >January 2026</span
+                >
+                <h3>Available for freelance</h3>
+                <p>
+                  Now accepting brief interactive design commissions and local
+                  UI contracts.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     CONTACT
+                     ============================== -->
+          <section id="contact" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Contact</h2>
+            <div class="sg-element">
+              <h3>Get In Touch</h3>
+              <p>
+                Fill out the form below or trigger the modal via the standard
+                interface.
+              </p>
+              <div
+                class="sg-rendered"
+                style="
+                  background: var(--brand-primary);
+                  color: #fff;
+                  border: 1px solid var(--brand-primary);
+                "
+              >
+                <form style="max-width: 500px">
+                  <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Project Details</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                  <button
+                    class="btn"
+                    style="
+                      border: 1px solid #fff;
+                      color: #fff;
+                      background: transparent;
+                      border-radius: 99px;
+                    "
+                  >
+                    Submit Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     FEEDBACK
+                     ============================== -->
+          <section id="feedback" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Design Feedback</h2>
+            <div class="sg-element">
+              <h3>Component Review</h3>
+              <p>
+                Please log any issues found regarding padding or hover state
+                logic so they can be addressed in the next commit.
+              </p>
+              <form class="sg-rendered" style="max-width: 500px">
+                <div class="form-group">
+                  <label class="form-label" style="color: var(--text-secondary)"
+                    >Feedback Rating (1-5)</label
+                  >
+                  <select
+                    style="
+                      width: 100%;
+                      padding: 0.8rem;
+                      border: 1px solid var(--border-light);
+                      font-family: var(--font-body);
+                    "
+                  >
+                    <option>5 - Exceptional Execution</option>
+                    <option>4 - Solid Setup</option>
+                    <option>3 - Needs Polish</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" style="color: var(--text-secondary)"
+                    >Repository Comments</label
+                  >
+                  <textarea
+                    style="
+                      width: 100%;
+                      padding: 0.8rem;
+                      border: 1px solid var(--border-light);
+                      min-height: 100px;
+                      font-family: var(--font-body);
+                    "
+                  ></textarea>
+                </div>
+                <button class="btn btn-primary" type="button">
+                  Push Feedback
+                </button>
+              </form>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     TEMPLATES
+                     ============================== -->
+          <section id="templates" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Template Pages</h2>
+            <div class="sg-element">
+              <div style="display: grid; gap: 1rem">
+                <a
+                  href="index.html"
+                  class="sg-rendered"
+                  style="
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    transition: all 0.2s;
+                  "
+                >
+                  <h3
+                    style="margin-bottom: 0.5rem; color: var(--brand-primary)"
+                  >
+                    Homepage Template
+                  </h3>
+                  <p style="margin: 0">
+                    View the implementation of the animated hero and the global
+                    "About Me" modal.
+                  </p>
+                </a>
+                <a
+                  href="process.html"
+                  class="sg-rendered"
+                  style="
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    transition: all 0.2s;
+                  "
+                >
+                  <h3
+                    style="margin-bottom: 0.5rem; color: var(--brand-primary)"
+                  >
+                    Process Analysis
+                  </h3>
+                  <p style="margin: 0">
+                    Comprehensive breakdown of structural decisions.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==============================
+                     CITATIONS
+                     ============================== -->
+          <section id="citations" style="margin-top: 4rem">
+            <h2 style="margin-bottom: 2rem">Citations</h2>
+            <div class="sg-element" style="border: none">
+              <ul style="margin-left: 20px">
+                <li>
+                  <strong>Playfair Display Font</strong> — Google Fonts.
+                  <a href="https://fonts.google.com/specimen/Playfair+Display"
+                    >Link</a
+                  >
+                </li>
+                <li>
+                  <strong>Inter Font</strong> — Google Fonts.
+                  <a href="https://fonts.google.com/specimen/Inter">Link</a>
+                </li>
+                <li>
+                  <strong>Arrow Icon</strong> — Feather Icons.
+                  <a href="https://feathericons.com/">Link</a>
+                </li>
+                <li>
+                  <strong>Social SVG Icons</strong> — Core SVG attributes
+                  loosely drawn from open source packs.
+                </li>
+                <li>
+                  <strong>Stock Workplace Image</strong> — Unsplash.
+                  <a
+                    href="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+                    >Link</a
+                  >
+                </li>
+                <li>
+                  <strong>Telegram SVG</strong> — Telegram.
+                  <a href="https://icons.getbootstrap.com/icons/telegram/"
+                    >Link</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer
+      class="site-footer"
+      style="
+        margin-top: 0;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        border-top: 1px solid var(--border-light);
+        padding: 2rem 0;
+        text-align: center;
+      "
+    >
+      <p style="color: var(--text-muted)">&copy; 2026 Mahdi Taziki.</p>
+      <div style="font-size: 0.85rem; margin-top: 0.5rem">
+        <a
+          href="index.html"
+          style="color: var(--brand-primary); margin: 0 0.5rem"
+          >Home</a
+        >
+        <a
+          href="process.html"
+          style="color: var(--brand-primary); margin: 0 0.5rem"
+          >Process Docs</a
+        >
+        <a
+          href="https://github.com/Mhd-tz/P03_MahdiTaziki"
+          style="color: var(--brand-primary); margin: 0 0.5rem"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

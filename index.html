@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mahdi Taziki - Interactive Designer & Developer."
+    />
+    <title>Mahdi Taziki</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="logo">Mahdi Taziki</div>
+        <nav class="nav-links">
+          <a href="#experiences" class="nav-link">Experiences</a>
+          <a href="#" class="nav-link" id="about-trigger">About Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- Background Particles -->
+        <div class="particles">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+        </div>
+
+        <div class="container hero-content">
+          <h1
+            class="animate-fade-up"
+            style="max-width: 800px; margin: 0 auto 1rem"
+          >
+            Crafting digital experiences.
+          </h1>
+          <div class="typing-container animate-fade-up delay-100">
+            <span class="typing-text"></span>
+          </div>
+
+          <div
+            class="animate-fade-up delay-200"
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+              margin-top: 2.5rem;
+            "
+          >
+            <a href="#experiences" class="btn btn-primary">Experiences</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Grid -->
+      <section
+        id="experiences"
+        style="padding: 6rem 0; background: var(--bg-secondary)"
+      >
+        <div class="container">
+          <div
+            class="animate-fade-up mb-lg"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              border-bottom: 1px solid var(--border-light);
+              padding-bottom: 1.2rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <div>
+              <span class="title-caption" style="margin-bottom: 0.5rem"
+                >01.</span
+              >
+              <h2 style="margin: 0">Experiences</h2>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+              gap: 4rem;
+            "
+          >
+            <!-- Project 1 -->
+            <a href="#" class="project-card animate-fade-up">
+              <div class="project-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800"
+                  alt="Editorial Layout"
+                />
+                <div class="project-overlay-btn">
+                  View Case Study
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <span
+                class="title-caption"
+                style="margin-bottom: 0.5rem; color: var(--text-muted)"
+                >Web Design</span
+              >
+              <h3 class="project-title">Editorial Framework</h3>
+              <p style="margin: 0">
+                A typographic scale and component library built for a digital
+                editorial platform.
+              </p>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="#" class="project-card animate-fade-up delay-100">
+              <div class="project-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800"
+                  alt="Interface Layout"
+                />
+                <div class="project-overlay-btn">
+                  View Case Study
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <span
+                class="title-caption"
+                style="margin-bottom: 0.5rem; color: var(--text-muted)"
+                >Development</span
+              >
+              <h3 class="project-title">Lumina UI Kit</h3>
+              <p style="margin: 0">
+                A barebones CSS utility framework focusing on accessibility and
+                fluid layouts.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta animate-fade-up">
+          <h2>Let's work together.</h2>
+          <p>
+            Available for freelance opportunities and collaborative projects.
+          </p>
+          <button class="btn btn-white" id="footer-contact-trigger">
+            Get In Touch
+          </button>
+        </div>
+
+        <div class="footer-bottom animate-fade-up delay-100">
+          <div class="footer-nav">
+            <a href="styleguide.html">Style Guide</a>
+            <a href="process.html">Process</a>
+          </div>
+
+          <div class="social-icons">
+            <!-- Github -->
+            <a
+              href="https://github.com/Mhd-tz/P03_MahdiTaziki"
+              aria-label="Github"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <!-- Telegram -->
+            <a href="#" aria-label="Telegram" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-telegram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p
+          style="
+            text-align: left;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 1rem;
+          "
+        >
+          &copy; 2026 Mahdi Taziki.
+        </p>
+      </div>
+    </footer>
+
+    <!-- About Me Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="about-modal" id="about-modal">
+      <!-- Author Info -->
+      <div class="modal-left">
+        <h2>About me.</h2>
+        <div class="modal-left-content">
+          <p>
+            Interactive designer & developer with a passion for creating
+            creative, responsive websites and applications. Aside from my study
+            at SFU, I like to create and contribute to open source projects.
+          </p>
+
+          <h3>360° project vision</h3>
+          <p>
+            I have worked in the main departments involved in the creation of
+            digital products:
+          </p>
+          <ul>
+            <li>Front-end development</li>
+            <li>UI/UX design</li>
+            <li>Project management</li>
+            <li>Software architecture</li>
+          </ul>
+          <a href="#" class="modal-resume-link"
+            >My resume
+            <svg
+              class="icon-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline></svg
+          ></a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="modal-right">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h2>Let's Talk.</h2>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Name *</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-mail *</label>
+            <input type="email" class="form-control" required />
+          </div>
+          <div class="form-group" style="margin-bottom: 2rem">
+            <label class="form-label">Message *</label>
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <div style="flex-grow: 1"></div>
+          <div class="submit-container">
+            <button type="submit" class="btn btn-pill-outline">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Floating Contact Badge -->
+      <div class="modal-phone-badge">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.022-3.498-6.82-2.106 1.039c-1.685.83-2.553 3.013-1.698 5.485l1.241 3.255c1.472 3.844 6.702 12.637 12.083 14.54l1.378.487c2.515.885 5.09-1.295 5.922-3.882l-5.211-2.304z"
+          />
+        </svg>
+        +1 (778) 874-4934
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Bind footer button to modal
+      document
+        .getElementById("footer-contact-trigger")
+        .addEventListener("click", () => {
+          document.getElementById("about-trigger").click();
+        });
+    </script>
+  </body>
+</html>
