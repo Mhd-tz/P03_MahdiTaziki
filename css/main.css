@@ -435,7 +435,7 @@ textarea {
 }
 
 /* =============================================
-   HERO — Redesigned
+   HERO - Redesigned
    ============================================= */
 .hero {
   position: relative;
@@ -1237,7 +1237,7 @@ textarea {
 }
 
 /* =============================================
-   EXPERIENCE CARDS — Index Page Grid
+   EXPERIENCE CARDS - Index Page Grid
    ============================================= */
 .exp-grid {
   display: grid;
@@ -1269,12 +1269,13 @@ textarea {
   height: 230px;
   overflow: hidden;
   flex-shrink: 0;
+  background: #0a0a0a;
 }
 .exp-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
   display: block;
   transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1426,9 +1427,8 @@ textarea {
    EXPERIENCE DETAIL PAGE
    ============================================= */
 .exp-detail-hero {
-  min-height: 60vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   padding-top: 90px; /* header offset */
   position: relative;
   overflow: hidden;
@@ -1452,26 +1452,38 @@ textarea {
 .exp-detail-hero-content {
   position: relative;
   z-index: 1;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
   width: 100%;
 }
 .exp-detail-hero-logo {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+  overflow: hidden;
   border: 1px solid rgba(255,255,255,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 2rem;
 }
-.exp-detail-hero-logo span {
-  color: #fff;
-  font-family: var(--font-head);
-  font-size: 2.25rem;
-  font-weight: 700;
+.exp-detail-hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: rgba(255,255,255,0.1);
+  display: block;
+}
+.exp-detail-hero-imgs {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.exp-hero-preview-img {
+  width: 100%;
+  display: block;
+  border-radius: 16px 16px 0 0;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 -12px 48px rgba(0,0,0,0.3);
 }
 .exp-back-link {
   display: inline-flex;
