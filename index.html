@@ -20,9 +20,34 @@
   <body>
     <header class="site-header">
       <div class="container nav-container">
-        <div class="logo">M.</div>
+        <div class="logo">
+          <svg class="logo-svg" viewBox="0 0 160 100">
+            <defs>
+              <mask id="logo-mask">
+                <text
+                  class="logo-mask-text"
+                  x="50%"
+                  y="75%"
+                  text-anchor="middle"
+                >
+                  M.
+                </text>
+              </mask>
+            </defs>
+            <text
+              class="logo-text-filled"
+              x="50%"
+              y="75%"
+              text-anchor="middle"
+              mask="url(#logo-mask)"
+            >
+              M.
+            </text>
+          </svg>
+        </div>
         <nav class="nav-links">
           <a href="#experiences" class="nav-link">Experiences</a>
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#" class="nav-link" id="about-trigger">About Me</a>
         </nav>
       </div>
@@ -45,31 +70,74 @@
           <!-- Handwritten name SVG animation -->
           <h1 class="hero-name-container">
             <span class="sr-only">Mahdi Taziki</span>
-            <svg class="hero-name-svg" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg
+              class="hero-name-svg"
+              viewBox="0 0 600 300"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
               <defs>
                 <!-- Refined dark purple contrast gradient -->
-                <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient
+                  id="accent-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
                   <stop offset="0%" stop-color="#2a1f40" />
                   <stop offset="60%" stop-color="#5c4d7d" />
                   <stop offset="100%" stop-color="#8f7ab8" />
                 </linearGradient>
 
                 <mask id="draw-mask-1">
-                  <text class="mask-word mask-1" x="50%" y="45%" text-anchor="middle">Mahdi</text>
+                  <text
+                    class="mask-word mask-1"
+                    x="50%"
+                    y="45%"
+                    text-anchor="middle"
+                  >
+                    Mahdi
+                  </text>
                 </mask>
                 <mask id="draw-mask-2">
-                  <text class="mask-word mask-2" x="50%" y="90%" text-anchor="middle" font-style="italic">Taziki</text>
+                  <text
+                    class="mask-word mask-2"
+                    x="50%"
+                    y="90%"
+                    text-anchor="middle"
+                    font-style="italic"
+                  >
+                    Taziki
+                  </text>
                 </mask>
               </defs>
-              <text class="text-filled word-1" x="50%" y="45%" text-anchor="middle" mask="url(#draw-mask-1)">Mahdi</text>
-              <text class="text-filled word-2" x="50%" y="90%" text-anchor="middle" font-style="italic" mask="url(#draw-mask-2)">Taziki</text>
+              <text
+                class="text-filled word-1"
+                x="50%"
+                y="45%"
+                text-anchor="middle"
+                mask="url(#draw-mask-1)"
+              >
+                Mahdi
+              </text>
+              <text
+                class="text-filled word-2"
+                x="50%"
+                y="90%"
+                text-anchor="middle"
+                font-style="italic"
+                mask="url(#draw-mask-2)"
+              >
+                Taziki
+              </text>
             </svg>
           </h1>
 
-          <!-- Refined Minimalist Badge Subtitle -->
+          <!-- Seamless Elegant Subtitle -->
           <div class="hero-role-wrapper">
-            <div class="hero-role-badge role-animate" style="--delay: 2.2s">
-              Interactive Designer <span style="opacity: 0.4; margin: 0 0.5rem;">&</span> Developer
+            <div class="hero-subtitle role-animate" style="--delay: 2.2s">
+              Student, Experienced Full-stack Developer
             </div>
           </div>
 
@@ -99,65 +167,239 @@
       <section id="experiences" class="editorial-section">
         <!-- Faint noise texture background to match hero for continuity -->
         <div class="hero-noise"></div>
-        <div class="container" style="position: relative; z-index: 2;">
-          <div class="animate-fade-up mb-lg editorial-header">
+        <div class="container" style="position: relative; z-index: 2">
+          <div
+            class="animate-fade-up mb-lg editorial-header"
+            style="text-align: center"
+          >
             <div>
-              <span class="handwritten-caption">01.</span>
               <h2>Experiences</h2>
             </div>
           </div>
 
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-              gap: 4rem;
-            "
-          >
-            <!-- Project 1 -->
-            <a href="#" class="project-card animate-fade-up">
-              <div class="project-img-wrapper">
+          <div class="exp-grid">
+            <!-- Zenfeat -->
+            <a
+              href="exp-zenfeat.html"
+              class="exp-card animate-fade-up"
+              style="--card-color: #f09840"
+            >
+              <div class="exp-card-img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800"
-                  alt="Editorial Layout"
+                  src="images/zenfeat.png"
+                  alt="Zenfeat App"
+                  class="exp-card-img"
                 />
-                <div class="project-overlay-btn">
-                  View Case Study
-                  <svg
-                    class="icon-arrow"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
+                <div class="exp-card-img-overlay"></div>
+                <span class="exp-card-date-chip">2023 – 2024</span>
+              </div>
+              <div class="exp-card-inner">
+                <div class="exp-card-tools-label">React Native Development</div>
+                <h3 class="exp-card-title">Zenfeat</h3>
+                <p class="exp-card-desc">
+                  A marketplace connecting home chefs with local food
+                  enthusiasts — reimagining community-based food ordering.
+                </p>
+                <div class="exp-card-footer">
+                  <div class="exp-card-tags">
+                    <span class="exp-tag">React Native</span>
+                    <span class="exp-tag">Webflow</span>
+                    <span class="exp-tag">Supabase</span>
+                    <span class="exp-tag">UI/UX</span>
+                  </div>
+                  <div class="exp-card-link">
+                    View
+                    <svg
+                      class="icon-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <span class="hero-role-badge badge-small" style="margin-bottom: 1rem;">Web Design</span>
-              <h3 class="project-title">Editorial Framework</h3>
-              <p style="margin: 0">
-                A typographic scale and component library built for a digital
-                editorial platform.
-              </p>
             </a>
 
-            <!-- Project 2 -->
-            <a href="#" class="project-card animate-fade-up delay-100">
-              <div class="project-img-wrapper">
+            <!-- Inobat -->
+            <a
+              href="exp-inobat.html"
+              class="exp-card animate-fade-up delay-100"
+              style="--card-color: #3ab372"
+            >
+              <div class="exp-card-img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800"
-                  alt="Interface Layout"
+                  src="images/Inobat1.png"
+                  alt="Inobat Web App"
+                  class="exp-card-img"
                 />
-                <div class="project-overlay-btn">
-                  View Case Study
+                <div class="exp-card-img-overlay"></div>
+                <span class="exp-card-date-chip">2021 – 2022</span>
+              </div>
+              <div class="exp-card-inner">
+                <div class="exp-card-tools-label">Next.js Development</div>
+                <h3 class="exp-card-title">Inobat</h3>
+                <p class="exp-card-desc">
+                  A web platform helping clinics and hospitals manage patients
+                  and appointments — boosting conversion rate by 35%.
+                </p>
+                <div class="exp-card-footer">
+                  <div class="exp-card-tags">
+                    <span class="exp-tag">Next.js</span>
+                    <span class="exp-tag">Back4app</span>
+                    <span class="exp-tag">Realtime DB</span>
+                    <span class="exp-tag">UI/UX</span>
+                  </div>
+                  <div class="exp-card-link">
+                    View
+                    <svg
+                      class="icon-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Guessfit -->
+            <a
+              href="exp-guessfit.html"
+              class="exp-card animate-fade-up"
+              style="--card-color: #2b5098"
+            >
+              <div class="exp-card-img-wrap">
+                <img
+                  src="images/GuessfitLogo.jpg"
+                  alt="Guessfit App"
+                  class="exp-card-img"
+                />
+                <div class="exp-card-img-overlay"></div>
+                <span class="exp-card-date-chip">2020 – 2021</span>
+              </div>
+              <div class="exp-card-inner">
+                <div class="exp-card-tools-label">React Native Development</div>
+                <h3 class="exp-card-title">Guessfit</h3>
+                <p class="exp-card-desc">
+                  An AI-driven fitness mobile app for athletes — smart coaching,
+                  personalised meal planning, and training insights.
+                </p>
+                <div class="exp-card-footer">
+                  <div class="exp-card-tags">
+                    <span class="exp-tag">React Native</span>
+                    <span class="exp-tag">Firebase</span>
+                    <span class="exp-tag">AI coaching</span>
+                    <span class="exp-tag">UI/UX</span>
+                  </div>
+                  <div class="exp-card-link">
+                    View
+                    <svg
+                      class="icon-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- CJSF -->
+            <a
+              href="exp-cjsf.html"
+              class="exp-card animate-fade-up delay-100"
+              style="--card-color: #27c7bc"
+            >
+              <div class="exp-card-img-wrap">
+                <img
+                  src="images/CJSFLogo.jpg"
+                  alt="CJSF App"
+                  class="exp-card-img"
+                />
+                <div class="exp-card-img-overlay"></div>
+                <span class="exp-card-date-chip">2019 – 2021</span>
+              </div>
+              <div class="exp-card-inner">
+                <div class="exp-card-tools-label">React Native Development</div>
+                <h3 class="exp-card-title">CJSF 90.1 FM</h3>
+                <p class="exp-card-desc">
+                  A mobile application and web platform for CJSF 90.1 FM — live
+                  radio streaming and on-demand podcasts.
+                </p>
+                <div class="exp-card-footer">
+                  <div class="exp-card-tags">
+                    <span class="exp-tag">React Native</span>
+                    <span class="exp-tag">Radio streaming</span>
+                    <span class="exp-tag">Podcasts</span>
+                    <span class="exp-tag">UI/UX</span>
+                  </div>
+                  <div class="exp-card-link">
+                    View
+                    <svg
+                      class="icon-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid - Sticky Stack -->
+      <section id="projects" class="projects-section">
+        <div class="container hero-content" style="max-width: 100%">
+          <div
+            class="animate-fade-up editorial-header"
+            style="text-align: center"
+          >
+            <div>
+              <h2>Projects</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-stack-container container">
+          <!-- Project Card 1 -->
+          <div class="stack-card">
+            <div class="stack-card-content">
+              <h3 class="stack-card-title">UShop-App</h3>
+              <div class="stack-card-tags">
+                <span class="tag">
                   <svg
-                    class="icon-arrow"
-                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -165,18 +407,164 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  TypeScript
+                </span>
+                <span class="tag">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                    ></path>
+                  </svg>
+                  ReactNative, Redux, Figma
+                </span>
+              </div>
+              <div class="stack-card-icons">
+                <div class="icon-circle">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
+                </div>
+                <div class="icon-circle">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M5 5.5A3.5 3.5 0 0 1 8.5 2h3v7h-3A3.5 3.5 0 0 1 5 5.5z"
+                    ></path>
+                    <path
+                      d="M5 12.5A3.5 3.5 0 0 1 8.5 9h3v7h-3A3.5 3.5 0 0 1 5 12.5z"
+                    ></path>
+                    <path
+                      d="M11.5 16A3.5 3.5 0 0 1 8.5 19.5 3.5 3.5 0 0 1 5 16v-3.5h3A3.5 3.5 0 0 1 11.5 16z"
+                    ></path>
+                    <path d="M11.5 9A3.5 3.5 0 0 1 15 5.5h3V9h-6z"></path>
+                    <path
+                      d="M15 9A3.5 3.5 0 0 1 18.5 12.5 3.5 3.5 0 0 1 15 16h-3V9h3z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="icon-circle">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    ></path>
                   </svg>
                 </div>
               </div>
-              <span class="hero-role-badge badge-small" style="margin-bottom: 1rem;">Development</span>
-              <h3 class="project-title">Lumina UI Kit</h3>
-              <p style="margin: 0">
-                A barebones CSS utility framework focusing on accessibility and
-                fluid layouts.
-              </p>
-            </a>
+            </div>
+            <div class="stack-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&q=80&w=800"
+                alt="UShop App Mockup"
+              />
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="stack-card">
+            <div class="stack-card-content">
+              <h3 class="stack-card-title">FinDash</h3>
+              <div class="stack-card-tags">
+                <span class="tag">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Vue.js, Python
+                </span>
+                <span class="tag">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                    ></path>
+                  </svg>
+                  D3.js, Tailwind
+                </span>
+              </div>
+            </div>
+            <div class="stack-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                alt="Dashboard"
+              />
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="stack-card">
+            <div class="stack-card-content">
+              <h3 class="stack-card-title">Nova Core</h3>
+              <div class="stack-card-tags">
+                <span class="tag">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Next.js, Node
+                </span>
+              </div>
+            </div>
+            <div class="stack-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                alt="Web app"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -186,7 +574,9 @@
     <footer class="site-footer editorial-footer">
       <div class="container">
         <div class="footer-cta animate-fade-up">
-          <h2 class="footer-title">Let's work <span class="handwritten-accent">together</span>.</h2>
+          <h2 class="footer-title">
+            Let's work <span class="handwritten-accent">together</span>.
+          </h2>
           <p class="footer-subtitle">
             Available for freelance opportunities and collaborative projects.
           </p>
@@ -297,7 +687,9 @@
       <!-- Contact Form -->
       <div class="modal-right editorial-modal-right">
         <button class="modal-close" id="modal-close">&times;</button>
-        <h2 class="handwritten-accent text-center" style="margin-bottom: 2rem;">Let's Talk.</h2>
+        <h2 class="handwritten-accent text-center" style="margin-bottom: 2rem">
+          Let's Talk.
+        </h2>
         <form>
           <div class="form-group">
             <label class="form-label">Name *</label>
@@ -313,7 +705,9 @@
           </div>
           <div style="flex-grow: 1"></div>
           <div class="submit-container">
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%">
+              Submit
+            </button>
           </div>
         </form>
       </div>
