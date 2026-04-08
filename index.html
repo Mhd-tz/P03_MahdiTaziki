@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
@@ -20,7 +20,7 @@
   <body>
     <header class="site-header">
       <div class="container nav-container">
-        <div class="logo">Mahdi Taziki</div>
+        <div class="logo">M.</div>
         <nav class="nav-links">
           <a href="#experiences" class="nav-link">Experiences</a>
           <a href="#" class="nav-link" id="about-trigger">About Me</a>
@@ -31,59 +31,79 @@
     <main>
       <!-- Hero Section -->
       <section class="hero">
-        <!-- Background Particles -->
-        <div class="particles">
-          <div class="blob blob-1"></div>
-          <div class="blob blob-2"></div>
+        <!-- Pristine minimalist background -->
+        <div class="hero-bg" id="hero-bg">
+          <div class="hero-noise"></div>
         </div>
 
         <div class="container hero-content">
-          <h1
-            class="animate-fade-up"
-            style="max-width: 800px; margin: 0 auto 1rem"
-          >
-            Crafting digital experiences.
-          </h1>
-          <div class="typing-container animate-fade-up delay-100">
-            <span class="typing-text"></span>
+          <!-- Elegant minimal intro label -->
+          <div class="intro-label hero-animate" style="--delay: 0.1s">
+            Hi, I'm
           </div>
 
-          <div
-            class="animate-fade-up delay-200"
-            style="
-              display: flex;
-              justify-content: center;
-              gap: 1rem;
-              margin-top: 2.5rem;
-            "
-          >
-            <a href="#experiences" class="btn btn-primary">Experiences</a>
+          <!-- Handwritten name SVG animation -->
+          <h1 class="hero-name-container">
+            <span class="sr-only">Mahdi Taziki</span>
+            <svg class="hero-name-svg" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <!-- Refined dark purple contrast gradient -->
+                <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2a1f40" />
+                  <stop offset="60%" stop-color="#5c4d7d" />
+                  <stop offset="100%" stop-color="#8f7ab8" />
+                </linearGradient>
+
+                <mask id="draw-mask-1">
+                  <text class="mask-word mask-1" x="50%" y="45%" text-anchor="middle">Mahdi</text>
+                </mask>
+                <mask id="draw-mask-2">
+                  <text class="mask-word mask-2" x="50%" y="90%" text-anchor="middle" font-style="italic">Taziki</text>
+                </mask>
+              </defs>
+              <text class="text-filled word-1" x="50%" y="45%" text-anchor="middle" mask="url(#draw-mask-1)">Mahdi</text>
+              <text class="text-filled word-2" x="50%" y="90%" text-anchor="middle" font-style="italic" mask="url(#draw-mask-2)">Taziki</text>
+            </svg>
+          </h1>
+
+          <!-- Refined Minimalist Badge Subtitle -->
+          <div class="hero-role-wrapper">
+            <div class="hero-role-badge role-animate" style="--delay: 2.2s">
+              Interactive Designer <span style="opacity: 0.4; margin: 0 0.5rem;">&</span> Developer
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="hero-cta hero-animate" style="--delay: 2.6s">
+            <a href="#experiences" class="btn btn-primary">
+              View My Work
+              <svg
+                class="icon-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- Portfolio Grid -->
-      <section
-        id="experiences"
-        style="padding: 6rem 0; background: var(--bg-secondary)"
-      >
-        <div class="container">
-          <div
-            class="animate-fade-up mb-lg"
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: flex-end;
-              border-bottom: 1px solid var(--border-light);
-              padding-bottom: 1.2rem;
-              margin-bottom: 1rem;
-            "
-          >
+      <section id="experiences" class="editorial-section">
+        <!-- Faint noise texture background to match hero for continuity -->
+        <div class="hero-noise"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="animate-fade-up mb-lg editorial-header">
             <div>
-              <span class="title-caption" style="margin-bottom: 0.5rem"
-                >01.</span
-              >
-              <h2 style="margin: 0">Experiences</h2>
+              <span class="handwritten-caption">01.</span>
+              <h2>Experiences</h2>
             </div>
           </div>
 
@@ -118,11 +138,7 @@
                   </svg>
                 </div>
               </div>
-              <span
-                class="title-caption"
-                style="margin-bottom: 0.5rem; color: var(--text-muted)"
-                >Web Design</span
-              >
+              <span class="hero-role-badge badge-small" style="margin-bottom: 1rem;">Web Design</span>
               <h3 class="project-title">Editorial Framework</h3>
               <p style="margin: 0">
                 A typographic scale and component library built for a digital
@@ -154,11 +170,7 @@
                   </svg>
                 </div>
               </div>
-              <span
-                class="title-caption"
-                style="margin-bottom: 0.5rem; color: var(--text-muted)"
-                >Development</span
-              >
+              <span class="hero-role-badge badge-small" style="margin-bottom: 1rem;">Development</span>
               <h3 class="project-title">Lumina UI Kit</h3>
               <p style="margin: 0">
                 A barebones CSS utility framework focusing on accessibility and
@@ -171,14 +183,14 @@
     </main>
 
     <!-- Site Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer editorial-footer">
       <div class="container">
         <div class="footer-cta animate-fade-up">
-          <h2>Let's work together.</h2>
-          <p>
+          <h2 class="footer-title">Let's work <span class="handwritten-accent">together</span>.</h2>
+          <p class="footer-subtitle">
             Available for freelance opportunities and collaborative projects.
           </p>
-          <button class="btn btn-white" id="footer-contact-trigger">
+          <button class="btn btn-outline-light" id="footer-contact-trigger">
             Get In Touch
           </button>
         </div>
@@ -242,10 +254,10 @@
 
     <!-- About Me Modal -->
     <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="about-modal" id="about-modal">
+    <div class="about-modal editorial-modal" id="about-modal">
       <!-- Author Info -->
-      <div class="modal-left">
-        <h2>About me.</h2>
+      <div class="modal-left editorial-modal-left">
+        <h2 class="handwritten-accent">About me.</h2>
         <div class="modal-left-content">
           <p>
             Interactive designer & developer with a passion for creating
@@ -283,9 +295,9 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="modal-right">
+      <div class="modal-right editorial-modal-right">
         <button class="modal-close" id="modal-close">&times;</button>
-        <h2>Let's Talk.</h2>
+        <h2 class="handwritten-accent text-center" style="margin-bottom: 2rem;">Let's Talk.</h2>
         <form>
           <div class="form-group">
             <label class="form-label">Name *</label>
@@ -301,7 +313,7 @@
           </div>
           <div style="flex-grow: 1"></div>
           <div class="submit-container">
-            <button type="submit" class="btn btn-pill-outline">Submit</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
           </div>
         </form>
       </div>

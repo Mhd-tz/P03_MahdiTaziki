@@ -77,6 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* --- Hero Background Mouse Parallax --- */
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+        let targetX = 0, targetY = 0, curX = 0, curY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            targetX = (e.clientX / window.innerWidth  - 0.5) * 28;
+            targetY = (e.clientY / window.innerHeight - 0.5) * 18;
+        });
+
+        (function tick() {
+            curX += (targetX - curX) * 0.05;
+            curY += (targetY - curY) * 0.05;
+            heroBg.style.transform = `translate(${curX}px, ${curY}px)`;
+            requestAnimationFrame(tick);
+        })();
+    }
+
     /* --- Styleguide Active Section Highlight --- */
     const sgContentBlocks = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.sg-nav a[href^="#"]');
