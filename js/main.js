@@ -34,19 +34,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  /* Hamburger Menu */
+  const hamburgerBtn = document.getElementById("nav-hamburger");
+  const mobileNav = document.getElementById("nav-mobile");
+
+  if (hamburgerBtn && mobileNav) {
+    hamburgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      hamburgerBtn.classList.toggle("open");
+      mobileNav.classList.toggle("open");
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".site-header")) {
+        hamburgerBtn.classList.remove("open");
+        mobileNav.classList.remove("open");
+      }
+    });
+
+    // Close on any mobile nav link click
+    mobileNav.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburgerBtn.classList.remove("open");
+        mobileNav.classList.remove("open");
+      });
+    });
+  }
+
   /* Modal Logic for "About Me" */
-  const modalTrigger = document.getElementById("about-trigger");
+  const modalTriggers = document.querySelectorAll(".about-trigger");
   const modalOverlay = document.getElementById("modal-overlay");
   const modalWindow = document.getElementById("about-modal");
   const modalClose = document.getElementById("modal-close");
 
-  if (modalTrigger && modalOverlay && modalWindow && modalClose) {
+  if (modalTriggers.length > 0 && modalOverlay && modalWindow && modalClose) {
     // Open Modal
-    modalTrigger.addEventListener("click", (e) => {
-      e.preventDefault();
-      modalOverlay.classList.add("active");
-      modalWindow.classList.add("active");
-      document.body.style.overflow = "hidden"; // prevent background scrolling
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalOverlay.classList.add("active");
+        modalWindow.classList.add("active");
+        document.body.style.overflow = "hidden"; // prevent background scrolling
+      });
     });
 
     // Close on Button Click

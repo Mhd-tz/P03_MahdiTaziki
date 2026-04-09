@@ -65,9 +65,19 @@
             >Experiences</a
           >
           <a href="index.html#projects" class="nav-link">Projects</a>
-          <a href="#" class="nav-link" id="about-trigger">About Me</a>
+          <a href="#" class="nav-link about-trigger" id="about-trigger">About Me</a>
         </nav>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+      <nav class="nav-mobile" id="nav-mobile">
+        <a href="index.html#experiences" class="nav-link">Experiences</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="#" class="nav-link about-trigger">About Me</a>
+      </nav>
     </header>
 
     <main>
@@ -409,6 +419,7 @@
           <div class="form-group" style="margin-bottom: 2rem"><label class="form-label">Message *</label><textarea name="message" class="form-control" rows="3" required></textarea></div>
           <div style="flex-grow: 1"></div>
           <div class="submit-container"><button type="submit" class="btn btn-primary" style="width: 100%">Submit</button></div>
+          <p class="form-note">This contact form is functional and I use <strong>EmailJS</strong>.</p>
         </form>
       </div>
       <div class="modal-phone-badge">

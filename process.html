@@ -55,9 +55,19 @@
         <nav class="nav-links">
           <a href="index.html#experiences" class="nav-link">Experiences</a>
           <a href="index.html#projects" class="nav-link">Projects</a>
-          <a href="#" class="nav-link" id="about-trigger">About Me</a>
+          <a href="#" class="nav-link about-trigger" id="about-trigger">About Me</a>
         </nav>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+      <nav class="nav-mobile" id="nav-mobile">
+        <a href="index.html#experiences" class="nav-link">Experiences</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="#" class="nav-link about-trigger">About Me</a>
+      </nav>
     </header>
 
     <main
@@ -341,6 +351,7 @@ modalOverlay.addEventListener('click', () => {
               Submit
             </button>
           </div>
+          <p class="form-note">This contact form is functional and I use <strong>EmailJS</strong>.</p>
         </form>
       </div>
 
