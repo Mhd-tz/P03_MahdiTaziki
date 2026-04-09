@@ -158,4 +158,41 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start typing effect slightly after load
         setTimeout(type, 1000);
     }
+    /* --- Color Swatch Copy Logic --- */
+    const swatches = document.querySelectorAll('.exp-color-swatch');
+    swatches.forEach(swatch => {
+        swatch.addEventListener('click', function() {
+            const color = this.getAttribute('data-color');
+            if (!color) return;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(color).then(() => {
+                const icon = this.querySelector('.copy-icon');
+                const originalPath = icon.innerHTML;
+                
+                // Change to check icon
+                icon.innerHTML = '<polyline points="20 6 9 17 4 12"></polyline>';
+                
+                // Show feedback
+                let feedback = this.querySelector('.copy-feedback');
+                if (!feedback) {
+                    feedback = document.createElement('span');
+                    feedback.className = 'copy-feedback';
+                    feedback.textContent = 'Copied!';
+                    this.appendChild(feedback);
+                }
+
+                // Trigger animation
+                setTimeout(() => feedback.classList.add('active'), 10);
+                
+                // Hide and revert after delay
+                setTimeout(() => {
+                    feedback.classList.remove('active');
+                    icon.innerHTML = originalPath;
+                }, 1500);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        });
+    });
 });
