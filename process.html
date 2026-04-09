@@ -13,6 +13,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_f2vgWPFdAhqyridaFXuvs");
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -302,18 +312,28 @@ modalOverlay.addEventListener('click', () => {
         <h2 class="handwritten-accent text-center" style="margin-bottom: 2rem">
           Let's Talk.
         </h2>
-        <form>
+        <form id="contact-form">
           <div class="form-group">
             <label class="form-label">Name *</label>
-            <input type="text" class="form-control" required />
+            <input type="text" name="user_name" class="form-control" required />
           </div>
           <div class="form-group">
             <label class="form-label">E-mail *</label>
-            <input type="email" class="form-control" required />
+            <input
+              type="email"
+              name="user_email"
+              class="form-control"
+              required
+            />
           </div>
           <div class="form-group" style="margin-bottom: 2rem">
             <label class="form-label">Message *</label>
-            <textarea class="form-control" rows="3" required></textarea>
+            <textarea
+              name="message"
+              class="form-control"
+              rows="3"
+              required
+            ></textarea>
           </div>
           <div style="flex-grow: 1"></div>
           <div class="submit-container">
